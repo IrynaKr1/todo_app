@@ -1,0 +1,13 @@
+$primary-color: #1d1916;
+$page-color: #120f0d;
+$button-color: #fcae23;
+$done-task-color: #2eb861;
+
+.listItemContainer {
+  background-color: $primary-color;
+  color: whitesmoke;
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  padding: 10px;
+}
