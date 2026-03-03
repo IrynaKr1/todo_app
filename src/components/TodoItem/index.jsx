@@ -1,7 +1,14 @@
 import { MdOutlineDeleteOutline, MdOutlineEdit } from 'react-icons/md';
 import styles from './TodoItem.module.scss';
 
-function TodoListItem ({ status, task, date }) {
+function TodoListItem ({
+  status,
+  task,
+  date,
+  onDelete,
+  onEdit,
+  onToggleStatus,
+}) {
   return (
     <div className={styles.listItemContainer}>
       <input
@@ -9,12 +16,12 @@ function TodoListItem ({ status, task, date }) {
         checked={status}
         name='listItem'
         id='listItem'
-        onChange={() => {}}
+        onChange={onToggleStatus}
       />
       <div>{task}</div>
       <div>{date}</div>
-      <MdOutlineEdit />
-      <MdOutlineDeleteOutline />
+      <MdOutlineEdit onClick={onEdit} />
+      <MdOutlineDeleteOutline onClick={onDelete} />
     </div>
   );
 }
